@@ -1,0 +1,132 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[$fontsize$, a4paper]{article}
+
+% LAYOUT
+%--------------------------------
+\usepackage{geometry} 
+\geometry{$geometry$}
+
+% No page numbers
+\pagenumbering{gobble}
+
+% Left align
+\usepackage[document]{ragged2e}
+
+\usepackage{spreadtab}
+\usepackage[compact]{titlesec} % For customizing title sections
+\titlespacing*{\section}{0pt}{3pt}{-7pt} % Remove margin bottom from the title
+\usepackage{arydshln} % For the dotted line on the table
+\renewcommand{\arraystretch}{1.5} % Apply vertical padding to table cells
+\usepackage{hhline} % For single-cell borders
+\usepackage{enumitem} % For customizing lists
+\setlist{nolistsep} % No whitespace around list items
+\setlist[itemize]{leftmargin=0.5cm} % Reduce list left indent
+
+% LANGUAGE
+%--------------------------------
+$if(lang)$
+\usepackage{polyglossia}
+\setmainlanguage{$lang$}
+$endif$
+
+% TYPOGRAPHY
+%--------------------------------
+\usepackage{fontspec} 
+\usepackage{xunicode}
+\usepackage{xltxtra}
+
+% converts LaTeX specials (quotes, dashes etc.) to Unicode
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont [Ligatures={Common}, Numbers={OldStyle}]{$seriffont$}
+\setsansfont[Scale=0.9]{$sansfont$}
+
+% Set paragraph break
+\setlength{\parskip}{1em}
+
+% Custom ampersand
+\newcommand{\amper}{{\fontspec[Scale=.95]{$seriffont$}\selectfont\itshape\&}}
+
+$if(seriffont)$
+\setmainfont[SmallCapsFeatures={LetterSpace=5,Letters=SmallCaps}]{$seriffont$}
+$endif$
+$if(sansfont)$
+    \setsansfont{$sansfont$}
+$endif$
+
+% Command required by how Pandoc handles the list conversion
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% PDF SETUP
+%--------------------------------
+\usepackage[xetex, bookmarks, colorlinks, breaklinks, pdfauthor={$name$}]{hyperref}
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue} 
+
+% To display custom date in the example
+% \usepackage[nodayofweek]{datetime}
+% \newdate{date}{01}{12}{1867}
+% \date{\displaydate{date}}
+% Use this instead of \today
+% \displaydate{date}
+
+% DOCUMENT
+%--------------------------------
+\begin{document}
+\small
+\textsc{\textbf{$author$}}
+$for(from)$
+\textbullet{} \textsc{$from$}
+$endfor$
+
+\vspace{1em}
+
+\normalsize \sffamily
+$for(to)$
+$to$\\
+$endfor$
+
+\vspace{6em}
+
+\rmfamily
+\begin{flushright}
+  $city$, \today
+\end{flushright}
+
+\vspace{1em}
+
+
+\section*{\textsc{Invoice} \#$invoice-nr$}
+\sffamily
+\footnotesize
+\newcounter{pos}
+\setcounter{pos}{0}
+\STautoround*{2} % Get spreadtab to always display the decimal part
+$if(commasep)$\STsetdecimalsep{,}$endif$ % Use comma as decimal separator
+
+\begin{spreadtab}{{tabular}[t t t]{lp{8.2cm}r}}
+  \hdashline[1pt/1pt]
+  @ \noalign{\vskip 2mm} \textbf{Pos.} & @ \textbf{Description} & @ \textbf{Prices in $currency$} \\ \hline
+      $for(service)$ @ \noalign{\vskip 2mm} \refstepcounter{pos} \thepos 
+        & @ $service.description$ 
+        $if(service.details)$\newline \begin{itemize} 
+          $for(service.details)$\scriptsize \item $service.details$ 
+          $endfor$ \end{itemize}
+          $endif$ & $service.price$\\$endfor$ \noalign{\vskip 2mm} \hline
+  @ & @ \multicolumn{1}{r}{Subtotal:}                & :={sum(c1:[0,-1])} \\ \hhline{~~-}
+  @ & @ \multicolumn{1}{r}{VAT $VAT$\%:}               & $VAT$/100*[0,-1] \\ \hhline{~~-}
+  @ & @ \multicolumn{1}{r}{\textbf{Total:}}   & \textbf{:={[0,-1]+[0,-2]}} \\ \hhline{~~-}
+\end{spreadtab}
+
+\vspace{15mm}
+
+\sffamily
+\small
+$closingnote$
+
+\medskip
+
+$author$
+
+\end{document}
