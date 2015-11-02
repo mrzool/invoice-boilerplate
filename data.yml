@@ -43,7 +43,7 @@ lang: english
 
 # Typography and layout
 seriffont: Hoefler Text
-sansfont: Helvetica
+sansfont: Helvetica Neue
 fontsize: 10pt
 geometry: a4paper, left=43mm, right=43mm, top=51mm, bottom=17mm
 ---
