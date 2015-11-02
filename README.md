@@ -36,7 +36,7 @@ service:
   price: 245.00
 ```
 
-When running `make`, [Pandoc](http://pandoc.org/) starts iterating on the data in the YAML file, populates `template.tex`, then pipes everything through XeTeX, which takes care of compiling a PDF ready to be printed/faxed/emailed and archived.
+When running `make`, [Pandoc](http://pandoc.org/) starts iterating on the data in the YAML file, populates `template.tex`, then pipes everything through XeTeX, which takes care of compiling a PDF ready to be printed/faxed/emailed and archived. (see the [output](output.pdf))
 
 The math gets handled internally by LaTeX through the `spreadtab` package, Excel-style. You just need to provide a VAT rate and the prices for the individual services and the boilerplate takes care of the rest. Unicode support is provided by XeTeX.
 
