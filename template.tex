@@ -14,23 +14,6 @@
 % Left align
 \usepackage[document]{ragged2e}
 
-\usepackage{spreadtab}
-\usepackage[compact]{titlesec} % For customizing title sections
-\titlespacing*{\section}{0pt}{3pt}{-7pt} % Remove margin bottom from the title
-\usepackage{arydshln} % For the dotted line on the table
-\renewcommand{\arraystretch}{1.5} % Apply vertical padding to table cells
-\usepackage{hhline} % For single-cell borders
-\usepackage{enumitem} % For customizing lists
-\setlist{nolistsep} % No whitespace around list items
-\setlist[itemize]{leftmargin=0.5cm} % Reduce list left indent
-
-% LANGUAGE
-%--------------------------------
-$if(lang)$
-\usepackage{polyglossia}
-\setmainlanguage{$lang$}
-$endif$
-
 % TYPOGRAPHY
 %--------------------------------
 \usepackage{fontspec} 
@@ -58,6 +41,27 @@ $endif$
 % Command required by how Pandoc handles the list conversion
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% TABLE CUSTOMIZATION
+%--------------------------------
+\usepackage{spreadtab}
+\usepackage[compact]{titlesec} % For customizing title sections
+\titlespacing*{\section}{0pt}{3pt}{-7pt} % Remove margin bottom from the title
+\usepackage{arydshln} % For the dotted line on the table
+\renewcommand{\arraystretch}{1.5} % Apply vertical padding to table cells
+\usepackage{hhline} % For single-cell borders
+\usepackage{enumitem} % For customizing lists
+\setlist{nolistsep} % No whitespace around list items
+\setlist[itemize]{leftmargin=0.5cm} % Reduce list left indent
+\setlength{\tabcolsep}{9pt} % Larger gutter between columns
+
+
+% LANGUAGE
+%--------------------------------
+$if(lang)$
+\usepackage{polyglossia}
+\setmainlanguage{$lang$}
+$endif$
 
 % PDF SETUP
 %--------------------------------
