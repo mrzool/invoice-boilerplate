@@ -36,11 +36,11 @@ service:
   price: 245.00
 ```
 
-When running `make`, [Pandoc](http://pandoc.org/) starts iterating on the data in the YAML file, populates `template.tex`, then pipes everything through XeTeX, which takes care of compiling a PDF ready to be printed/faxed/emailed and archived. (see the [output](output.pdf))
+When running `make`, [Pandoc](http://pandoc.org/) starts iterating on the data in the YAML file, populates `template.tex`, and pipes the result to XeTeX, which takes then care of typesetting and compiling a PDF ready to be printed/faxed/emailed and archived. (see the [output](output.pdf))
 
 The math gets handled internally by LaTeX through the `spreadtab` package, Excel-style. You just need to provide a VAT rate and the prices for the individual services and the boilerplate takes care of the rest. Unicode support is provided by XeTeX.
 
-Unless you intend to edit the template, no particular LaTeX knowledge is required to use this boilerplate.
+Unless you plan to edit the template, no particular LaTeX knowledge is required to use this boilerplate. If you need your invoice in a language other than English, finding the relevant strings in `template.tex` and translating them to your language should be easy enough.
 
 ## Dependencies
 
@@ -85,4 +85,4 @@ Refer to [pandoc's documentation](http://pandoc.org/demo/example9/templates.html
 
 ## License
 
-[MIT](https://opensource.org/licenses/MIT)
+[GPL](http://www.gnu.org/licenses/gpl-3.0.txt)
