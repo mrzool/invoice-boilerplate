@@ -64,12 +64,11 @@ $endif$
 \usepackage[xetex, bookmarks, colorlinks, breaklinks, pdfauthor={$name$}]{hyperref}
 \hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue} 
 
-% To display custom date in the example
+% To display custom date
 % \usepackage[nodayofweek]{datetime}
 % \newdate{date}{01}{12}{1867}
 % \date{\displaydate{date}}
-% Use this instead of \today
-% \displaydate{date}
+% Use this instead of \today: % \displaydate{date}
 
 % DOCUMENT
 %--------------------------------
@@ -89,8 +88,8 @@ $endfor$
 
 \vspace{6em}
 
-\rmfamily
 \begin{flushright}
+  \small
   $city$, \today
 \end{flushright}
 
@@ -98,7 +97,6 @@ $endfor$
 
 
 \section*{\textsc{Invoice} \#$invoice-nr$}
-\sffamily
 \footnotesize
 \newcounter{pos}
 \setcounter{pos}{0}
