@@ -53,7 +53,9 @@ To install pandoc on Mac OS X, run `brew install pandoc`. To install it on Linux
 
 ## Getting started
 
-1. Edit `data.yml` with your details, the invoice recipient's details, services and prices, and the desired settings.
+1. Paste this in your terminal:
+        git clone git@github.com:mrzool/invoice-boilerplate.git && cd invoice-boilerplate && rm -rf .git
+2. Edit `data.yml` with your details, the invoice recipient's details, services and prices, and the desired settings.
 2. Run `make` to compile the PDF.
 
 Refer to [pandoc's documentation](http://pandoc.org/demo/example9/templates.html) to learn more about how templates work.
