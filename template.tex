@@ -65,8 +65,17 @@ $endif$
 
 % PDF SETUP
 %--------------------------------
-\usepackage[xetex, bookmarks, colorlinks, breaklinks, pdfauthor={$name$}]{hyperref}
-\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue} 
+\usepackage[xetex, bookmarks, colorlinks, breaklinks]{hyperref}
+\hypersetup
+{
+  pdfauthor=$author$,
+  pdfsubject=Invoice Nr. $invoice-nr$,
+  pdftitle=Invoice Nr. $invoice-nr$,
+  linkcolor=blue,
+  citecolor=blue,
+  filecolor=black,
+  urlcolor=blue
+}
 
 % To display custom date
 % \usepackage[nodayofweek]{datetime}
