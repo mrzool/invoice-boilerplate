@@ -1,6 +1,6 @@
 # Invoice Boilerplate
 
-Simple automated LaTeX invoicing system for companies and freelancers.
+Simple automated LaTeX invoicing system for freelancers.
 
 ## Intro
 
