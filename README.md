@@ -71,6 +71,11 @@ Refer to [pandoc's documentation](http://pandoc.org/demo/example9/templates.html
 - **`fontsize`**: Possible values here are 10pt, 11pt and 12pt.
 - **`geometry`**: A string that sets the margins through `geometry`. Read [this](https://www.sharelatex.com/learn/Page_size_and_margins) to learn how this package works.
 - **`finalnote`**: This gets printed after the table as a closing note. Use it to provide your bank details and a thank you message.
+- **`letterhead`**: include custom letterhead in the PDF (see below).
+
+## Custom letterhead
+
+If you have already designed your own letterhead and want to use it with this template, including it should be easy enough. Set the `letterhead` option to `true` to activate the `wallpaper` package in the template. `wallpaper` will look for a file named `letterhead.pdf` in the project root folder and print it on the PDF before compiling the document. Change the fonts to match the ones in your letterhead, adjust the margins with `geometry` and you should be all set.
 
 ## Recommended readings
 

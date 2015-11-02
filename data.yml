@@ -38,7 +38,7 @@ closingnote: |
 
 # Invoice settings
 currency: EUR
-commasep: true
+# commasep: true
 lang: english
 
 # Typography and layout
@@ -46,4 +46,5 @@ seriffont: Hoefler Text
 sansfont: Helvetica Neue
 fontsize: 10pt
 geometry: a4paper, left=43mm, right=43mm, top=51mm, bottom=17mm
+# letterhead: true # To include personalized letterheads
 ---

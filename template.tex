@@ -14,6 +14,12 @@
 % Left align
 \usepackage[document]{ragged2e}
 
+$if(letterhead)$
+  % To include the letterhead
+  \usepackage{wallpaper}
+  \ULCornerWallPaper{1}{letterhead.pdf}
+$endif$
+
 % TYPOGRAPHY
 %--------------------------------
 \usepackage{fontspec} 
