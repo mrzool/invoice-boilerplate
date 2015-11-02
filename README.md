@@ -36,7 +36,7 @@ service:
   price: 245.00
 ```
 
-When running `make`, [Pandoc](http://pandoc.org/) starts iterating on the data in the YAML file, populates `template.tex`, and pipes the result to XeTeX, which takes then care of typesetting and compiling a PDF ready to be printed/faxed/emailed and archived. (see the [output](output.pdf))
+When running `make`, [Pandoc](http://pandoc.org/) starts iterating on the YAML file, populates `template.tex` with your data, and pipes the result to XeTeX, which takes then care of typesetting and compiling a PDF ready to be printed/faxed/emailed and archived (see the [output](output.pdf)).
 
 The math gets handled internally by LaTeX through the `spreadtab` package, Excel-style. You just need to provide a VAT rate and the prices for the individual services and the boilerplate takes care of the rest. Unicode support is provided by XeTeX.
 
@@ -64,13 +64,13 @@ Refer to [pandoc's documentation](http://pandoc.org/demo/example9/templates.html
 
 - **`VAT`**: Your VAT rate.
 - **`currency`**: Your currency code (USD, EUR...)
-- **`commasep`**: Set to true to use a comma as decimal separator. This is for display purposes only—remember to always use a dot to set the prices in your YAML file.
+- **`commasep`**: Set to `true` to use a comma as decimal separator. This is for display purposes only—remember to always use a dot to set the prices in your YAML file.
 - **`lang`**: Sets the main language through the `polyglossia` package. This is important for proper hyphenation and date format.
 - **`seriffont`**: Used for the heading and the sender address. Hoefler Text is the default, but every font installed on your system should work out of the box (thanks, XeTeX!)
-- **`sansfont`**: Used to render the recipient address, the table and the final note.
+- **`sansfont`**: Used to render the recipient address, the table and the final note. Defaults to Helvetica Neue.
 - **`fontsize`**: Possible values here are 10pt, 11pt and 12pt.
 - **`geometry`**: A string that sets the margins through `geometry`. Read [this](https://www.sharelatex.com/learn/Page_size_and_margins) to learn how this package works.
-- **`finalnote`**: This gets printed after the table as a closing note. Use it to provide your bank details and for your thank you message.
+- **`finalnote`**: This gets printed after the table as a closing note. Use it to provide your bank details and a thank you message.
 
 ## Recommended readings
 
