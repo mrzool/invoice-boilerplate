@@ -18,10 +18,10 @@ from:
 - Musterstraße 37
 - 12345 Musterstadt
 to:
-- Universität Basel
-- Petersplatz 1
-- 4003 Basel
-- Switzerland
+- Erika Mustermann
+- Musterallee 1
+- 12345 Musterstraße
+- Germany
 VAT: 20
 service:
 - description: The first service provided
