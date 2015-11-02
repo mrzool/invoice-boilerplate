@@ -70,7 +70,7 @@ Refer to [pandoc's documentation](http://pandoc.org/demo/example9/templates.html
 - **`sansfont`**: Used to render the recipient address, the table and the final note.
 - **`fontsize`**: Possible values here are 10pt, 11pt and 12pt.
 - **`geometry`**: A string that sets the margins through `geometry`. Read [this](https://www.sharelatex.com/learn/Page_size_and_margins) to learn how this package works.
-- **note**: This gets printed after the table as a closing note. Use it to provide your bank details and for your thank you message.
+- **`finalnote`**: This gets printed after the table as a closing note. Use it to provide your bank details and for your thank you message.
 
 ## Recommended readings
 
