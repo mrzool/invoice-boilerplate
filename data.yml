@@ -1,0 +1,49 @@
+---
+invoice-nr: 2015-11-04
+author: Max Mustermann
+city: Musterstadt
+from:
+- Musterstraße 37
+- 12345 Musterstadt
+to:
+- Erika Mustermann
+- Musterallee 1
+- 12345 Musterstraße
+- Germany
+VAT: 20
+service:
+- description: The first service provided
+  price: 320.00
+  details:
+- description: And another one, with a list of details
+  price: 245.00
+  details:
+    - Some more detailed explanation
+    - of the service provided
+    - Looking good
+- description: The last service provided
+  price: 65.00
+
+closingnote: |
+  Please transfer the due amount to the following bank account within the next 14 days:
+   
+    Mustermann GmbH  
+    Kreditinstitut: Deutsche Postbank AG  
+    IBAN: DE18 3601 0043 9999 9999 99  
+    BIC: PBNKDEFF  
+
+    We really appreciate your business and look forward to future projects together.
+
+    Best regards,
+
+# Invoice settings
+currency: EUR
+commasep: true
+lang: german
+
+# Typography and layout
+seriffont: Hoefler Text
+sansfont: Helvetica
+fontsize: 10pt
+geometry: a4paper, left=43mm, right=43mm, top=51mm, bottom=17mm
+---
