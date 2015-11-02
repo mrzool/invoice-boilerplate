@@ -20,7 +20,7 @@ from:
 to:
 - Erika Mustermann
 - Musterallee 1
-- 12345 Musterstraße
+- 12345 Musterstadt
 - Germany
 VAT: 20
 service:
