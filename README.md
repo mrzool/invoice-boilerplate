@@ -36,7 +36,7 @@ service:
   price: 245.00
 ```
 
-When running `make`, [Pandoc](http://pandoc.org/) starts iterating on the YAML file, populates `template.tex` with your data, and pipes the result to XeTeX, which takes then care of typesetting and compiling a PDF ready to be printed/faxed/emailed and archived (see the [output](output.pdf)).
+When running `make`, [Pandoc](http://pandoc.org/) starts iterating on the YAML file, populates `template.tex` with your data, and pipes the result to XeTeX, which deals with all the typesetting and compiles a PDF ready to be printed/faxed/emailed and archived (see the [output](output.pdf)).
 
 The math gets handled internally by LaTeX through the `spreadtab` package, Excel-style. You just need to provide a VAT rate and the prices for the individual services and the boilerplate takes care of the rest. Unicode support is provided by XeTeX.
 
@@ -91,6 +91,7 @@ If you have already designed your own letterhead and want to use it with this te
 - If you're not familiar with the YAML syntax, [here](http://learnxinyminutes.com/docs/yaml/)'s a good overview.
 - If you want to edit the template but LaTeX scares you, this [docs](https://www.sharelatex.com/learn/Main_Page) put together by ShareLaTeX cover most of the basics and are surprisingly kind to the beginner.
 - Odds are your question already has an answer on [TeX Stack Exchange](https://www.sharelatex.com/learn/Main_Page). Also, pretty friendly crowd in there.
+- Need to fax that invoice? Check out [Phaxio](https://www.phaxio.com/) and learn how to send your faxes from the command line with a simple API call.
 
 ## See also
 
