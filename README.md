@@ -53,7 +53,7 @@ To install pandoc on Mac OS X, run `brew install pandoc`. To install it on Linux
 
 ## Getting started
 
-1. Run this in your terminal to clone the repo, move into the right directory and delete all the git stuff: 
+1. Run this in your terminal to clone the repo, move into it and delete the git stuff: 
 
         git clone git@github.com:mrzool/invoice-boilerplate.git && cd invoice-boilerplate && rm -rf .git
 
