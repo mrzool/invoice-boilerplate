@@ -39,6 +39,7 @@ service:
 When running `make`, [Pandoc](http://pandoc.org/) starts iterating on the YAML file, populates `template.tex` with your data, and pipes the result to XeTeX. XeTeX deals with the typesetting and compiles a PDF ready to be printed/faxed/emailed and archived (see the [output](output.pdf)).
 
 The math gets handled internally by LaTeX through the `spreadtab` package, Excel-style (mad props to [clemens](http://tex.stackexchange.com/users/5049/clemens) on TeX SE for helping me out with this). You just need to provide a VAT rate and your prices, the boilerplate takes care of the rest.
+
 Unless you plan to edit the template, no particular LaTeX knowledge is required to use this boilerplate. If you need your invoice in a language other than English, finding the relevant strings in `template.tex` and translating them to your language should be easy enough.
 
 ## Dependencies
