@@ -96,7 +96,7 @@ If you have already designed your own letterhead and want to use it with this te
 ## See also
 
 - [cv-boilerplate](https://github.com/mrzool/cv-boilerplate) — Easing the process of building and maintaining a CV using LaTeX
-- [letter-boilerplate](https://github.com/mrzool/letter-boilerplate) — Quickly and painlessly generate high-quality letters from markdown through LaTeX
+- [letter-boilerplate](https://github.com/mrzool/letter-boilerplate) — Typeset your important letters without leaving your text editor
 
 ## License
 
