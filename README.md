@@ -8,7 +8,7 @@ Built along the lines of [cv-boilerplate](https://github.com/mrzool/cv-boilerpla
 
 ![preview](preview.png)
 
-The invoice content lives in `data.yml` and it's structured like so:
+The invoice content lives in `details.yml` and it's structured like so:
 
 ```YAML
 invoice-nr: 2015-11-04
@@ -57,7 +57,7 @@ To install pandoc on Mac OS X, run `brew install pandoc`. To install it on Linux
 
         git clone git@github.com:mrzool/invoice-boilerplate.git && cd invoice-boilerplate && rm -rf .git
 
-2. Open `data.yml` with your text editor and fill it with your details, the invoice recipient's details, services/prices, and the desired settings.
+2. Open `details.yml` with your text editor and fill it with your details, the invoice recipient's details, services/prices, and the desired settings.
 2. Run `make` to compile the PDF.
 
 **Note**: this template needs to be compiled with XeTeX.
