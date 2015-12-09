@@ -77,7 +77,7 @@ If you have already designed your own letterhead and want to use it with this te
 
 ## Recommended readings
 
-- [Typesetting Automation](http://mrzool.cc/writing/typesetting-automation/), my article about this project with in-depth instructions for a typical workflow.
+- [Typesetting Automation](http://mrzool.cc/writing/typesetting-automation/), my article about this project with in-depth instructions and some suggestions for an ideal workflow.
 - [Grids of Numbers Recommendations](http://practicaltypography.com/grids-of-numbers.html) on Butterick's Practical Typography
 - [Why Microsoft Word must Die](http://www.antipope.org/charlie/blog-static/2013/10/why-microsoft-word-must-die.html) by Charlie Stross
 - [The Beauty of LaTeX](http://nitens.org/taraborelli/latex) by Dario Taraborelli
