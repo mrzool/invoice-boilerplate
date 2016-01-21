@@ -75,8 +75,8 @@ $endif$
 \hypersetup
 {
   pdfauthor=$author$,
-  pdfsubject=Invoice Nr. $invoice-nr$,
-  pdftitle=Invoice Nr. $invoice-nr$,
+  pdfsubject=Rechnung Nr. $invoice-nr$,
+  pdftitle=Rechnung Nr. $invoice-nr$,
   linkcolor=blue,
   citecolor=blue,
   filecolor=black,
@@ -115,7 +115,7 @@ $endfor$
 \vspace{1em}
 
 
-\section*{\textsc{Invoice} \#$invoice-nr$}
+\section*{\textsc{Rechnung} \#$invoice-nr$}
 \footnotesize
 \newcounter{pos}
 \setcounter{pos}{0}
@@ -124,16 +124,17 @@ $if(commasep)$\STsetdecimalsep{,}$endif$ % Use comma as decimal separator
 
 \begin{spreadtab}{{tabular}[t t t]{lp{8.2cm}r}}
   \hdashline[1pt/1pt]
-  @ \noalign{\vskip 2mm} \textbf{Pos.} & @ \textbf{Description} & @ \textbf{Prices in $currency$} \\ \hline
+  @ \noalign{\vskip 2mm} \textbf{Pos.} & @ \textbf{Beschreibung} & @
+  \textbf{Betrag in $currency$} \\ \hline
       $for(service)$ @ \noalign{\vskip 2mm} \refstepcounter{pos} \thepos 
         & @ $service.description$ 
         $if(service.details)$\newline \begin{itemize} 
           $for(service.details)$\scriptsize \item $service.details$ 
           $endfor$ \end{itemize}
           $endif$ & $service.price$\\$endfor$ \noalign{\vskip 2mm} \hline
-  @ & @ \multicolumn{1}{r}{Subtotal:}                & :={sum(c1:[0,-1])} \\ \hhline{~~-}
-  @ & @ \multicolumn{1}{r}{VAT $VAT$\%:}               & $VAT$/100*[0,-1] \\ \hhline{~~-}
-  @ & @ \multicolumn{1}{r}{\textbf{Total:}}   & \textbf{:={[0,-1]+[0,-2]}} \\ \hhline{~~-}
+  @ & @ \multicolumn{1}{r}{Zwischensumme:}                & :={sum(c1:[0,-1])} \\ \hhline{~~-}
+  @ & @ \multicolumn{1}{r}{MwSt. $VAT$\%:}               & $VAT$/100*[0,-1] \\ \hhline{~~-}
+  @ & @ \multicolumn{1}{r}{\textbf{Rechnungsbetrag:}}   & \textbf{:={[0,-1]+[0,-2]}} \\ \hhline{~~-}
 \end{spreadtab}
 
 \vspace{15mm}
