@@ -1,45 +1,42 @@
 ---
 invoice-nr: 2015-11-04
-author: Max Mustermann
-city: Musterstadt
+author: Tobias Frischholz
+city: Markt Indersdorf
 from:
-- Musterstraße 37
-- 12345 Musterstadt
+- Westenstraße 31
+- 85229 Markt Indersdorf
 to:
 - Erika Mustermann
 - Musterallee 1
 - 12345 Musterstadt
 - Germany
-VAT: 20
+VAT: 0
 service:
-- description: The first service provided
+- description: Erste Dienstleistung
   price: 320.00
   details:
-- description: And another one, with a list of details
+- description: Zweite Dienstleistung mit Aufschlüsselung
   price: 245.00
   details:
-    - Some more detailed explanation
-    - of the service provided
-    - Looking good
-- description: The last service provided
-  price: 65.00
+    - Erster Punkt
+    - Zweiter Punkt
 
 closingnote: |
-  Please transfer the due amount to the following bank account within the next 14 days:
+  Ich bitte um Überweisung des Rechnungsbetrages innerhalb von 14 Tagen auf folgendes Konto:
    
-    Mustermann GmbH  
-    Kreditinstitut: Deutsche Postbank AG  
-    IBAN: DE18 3601 0043 9999 9999 99  
-    BIC: PBNKDEFF  
+    Tobias Frischholz  
+    Kreditinstitut: ING-DiBa  
+    IBAN: DE17500105175400984430  
+    BIC: INGDDEFFXXX  
 
-    We really appreciate your business and look forward to future projects together.
+    Als Kleinunternehmer im Sinne von § 19 Abs. 1 UStG wird keine Umsatzsteuer berechnet.
 
-    Best regards,
+    Mit freundlichen Grüßen,
 
 # Invoice settings
 currency: EUR
-# commasep: true
-lang: english
+commasep: true
+lang: german
 
 # Typography and layout
 seriffont: Hoefler Text
