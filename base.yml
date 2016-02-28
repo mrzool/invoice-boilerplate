@@ -1,0 +1,31 @@
+---
+author: Max Mustermann
+city: Musterstadt
+from:
+- Musterstraße 37
+- 12345 Musterstadt
+VAT: 20
+closingnote: |
+  Please transfer the due amount to the following bank account within the next 14 days:
+   
+    Mustermann GmbH  
+    Kreditinstitut: Deutsche Postbank AG  
+    IBAN: DE18 3601 0043 9999 9999 99  
+    BIC: PBNKDEFF  
+
+    We really appreciate your business and look forward to future projects together.
+
+    Best regards,
+
+# Invoice settings
+currency: EUR
+# commasep: true
+lang: english
+
+# Typography and layout
+seriffont: Hoefler Text
+sansfont: Helvetica Neue
+fontsize: 10pt
+geometry: a4paper, left=43mm, right=43mm, top=51mm, bottom=17mm
+# letterhead: true # To include personalized letterheads
+---
