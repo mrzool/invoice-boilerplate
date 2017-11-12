@@ -85,7 +85,10 @@ If you have already designed your own letterhead and want to use it with this te
 
 - [Typesetting Automation](http://mrzool.cc/writing/typesetting-automation/), my article about this project with in-depth instructions and some suggestions for an ideal workflow.
 - [Grids of Numbers Recommendations](http://practicaltypography.com/grids-of-numbers.html) on Butterick's Practical Typography
+- [Multichannel Text Processing](https://ia.net/topics/multichannel-text-processing/) by iA
 - [Why Microsoft Word must Die](http://www.antipope.org/charlie/blog-static/2013/10/why-microsoft-word-must-die.html) by Charlie Stross
+- [Word Processors: Stupid and Inefficient](http://ricardo.ecn.wfu.edu/~cottrell/wp.html) by Allin Cottrell
+- [Proprietary Binary Data Formats: Just Say No!](http://www.podval.org/~sds/data.html) by Sam Steingold
 - [The Beauty of LaTeX](http://nitens.org/taraborelli/latex) by Dario Taraborelli
 
 ## Resources
