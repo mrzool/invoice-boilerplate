@@ -2,6 +2,7 @@
 invoice-nr: 2015-11-04
 author: Max Mustermann
 city: Musterstadt
+date: \today # set custom date here
 from:
 - Musterstraße 37
 - 12345 Musterstadt
@@ -24,22 +25,34 @@ service:
 - description: The last service provided
   price: 65.00
 
-closingnote: |
+closingnote: | # use \total to refer to the calculated sum
   Please transfer the due amount to the following bank account within the next 14 days:
-   
-    Mustermann GmbH  
-    Kreditinstitut: Deutsche Postbank AG  
-    IBAN: DE18 3601 0043 9999 9999 99  
-    BIC: PBNKDEFF  
+
+    Mustermann GmbH
+    Kreditinstitut: Deutsche Postbank AG
+    IBAN: DE18 3601 0043 9999 9999 99
+    BIC: PBNKDEFF
 
     We really appreciate your business and look forward to future projects together.
 
     Best regards,
 
+signature:
+# put path to an image of your signature here
+
 # Invoice settings
 currency: EUR
-# commasep: true
-lang: english
+
+# Locale settings
+language: english
+locale:
+  commasep: true
+  VAT: MwSt.
+  price: Preis in
+  description: Beschreibung
+  itemPos: Nr.
+  subtotal: Netto
+  total: Brutto
 
 # Typography and layout
 seriffont: Hoefler Text
