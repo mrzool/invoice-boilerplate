@@ -1,8 +1,7 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[$fontsize$, a4paper]{article}
-
+\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper$endif$]{article}
 % LAYOUT
 %--------------------------------
 \usepackage{geometry} 
@@ -87,9 +86,14 @@ $if(locale.commasep)$\STsetdecimalsep{,}$endif$ % Use comma as decimal separator
 % LANGUAGE
 %--------------------------------
 \usepackage{polyglossia}
-$if(language)$
-\usepackage[$language$]{isodate}
-\setmainlanguage{$language$}
+\setmainlanguage{$polyglossia-lang$}
+\usepackage[
+  useregional,
+  $if(datetime2)$
+    $datetime2$
+  $endif$]{datetime2}
+$if(datestyle)$
+\DTMsetstyle{$datestyle$}
 $endif$
 
 % PDF SETUP
@@ -105,12 +109,6 @@ $endif$
   filecolor=black,
   urlcolor=blue
 }
-
-% To display custom date
-% \usepackage[nodayofweek]{datetime}
-% \newdate{date}{01}{12}{1867}
-% \date{\displaydate{date}}
-% Use this instead of \today: % \displaydate{date}
 
 % DOCUMENT
 %--------------------------------
@@ -132,7 +130,7 @@ $endfor$
 
 \begin{flushright}
   \small
-  $city$, $if(date)$$date$$else$\numdate\today$endif$
+  $city$, $if(date)$\date{$date$}$else$\Today$endif$
 \end{flushright}
 
 \vspace{1em}
