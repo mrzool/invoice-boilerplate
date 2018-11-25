@@ -66,20 +66,34 @@ Although I didn't test it, you can probably use this on Windows, too. Both [Pand
 
 ## Available settings
 
+- **`date`**: set a specific
 - **`VAT`**: Your VAT rate.
 - **`currency`**: Your currency code (USD, EUR...)
-- **`commasep`**: Set to `true` to use a comma as decimal separator. This is for display purposes only—remember to always use a dot to set the prices in your YAML file.
-- **`lang`**: Sets the main language through the `polyglossia` package. This is important for proper hyphenation and date format.
+- **`language`**: Sets the main language through the `polyglossia` package. This is important for proper hyphenation and date format.
 - **`seriffont`**: Used for the heading and the sender address. Hoefler Text is the default, but every font installed on your system should work out of the box (thanks, XeTeX!)
 - **`sansfont`**: Used to render the recipient address, the table and the closing note. Defaults to Helvetica Neue.
 - **`fontsize`**: Possible values here are 10pt, 11pt and 12pt.
 - **`geometry`**: A string that sets the margins through `geometry`. Read [this](https://www.sharelatex.com/learn/Page_size_and_margins) to learn how this package works.
 - **`closingnote`**: This gets printed after the table as a closing note. Use it to provide your bank details and a thank you message.
 - **`letterhead`**: include custom letterhead in the PDF (see below).
+- **`locale`**: configure strings and other locale related options. All strings default to their english variant
+  - **`commasep`**: Set to `true` to use a comma as decimal separator. This is for display purposes only—remember to always use a dot to set the prices in your YAML file.
+  - **`VAT`**: Set your local word for VAT here, e.g. MwSt. in geman
+  - **`price`**: Your local phrase for "price  in"
+  - **`description`**:  you get the idea ain't you? ;)
+  - **`subtotal`**: Netto
+  - **`total`**: Brutto
+  - **`itemPos`**: You can use `\phantom` to make shure the string is not displayed and not substituted by the english default value
 
 ## Custom letterhead
 
 If you have already designed your own letterhead and want to use it with this template, including it should be easy enough. Set the `letterhead` option to `true` to activate the `wallpaper` package in the template. `wallpaper` will look for a file named `letterhead.pdf` in the project root folder and print it on the PDF before compiling the document. Change the fonts to match the ones in your letterhead, adjust the margins with `geometry` and you should be all set.
+
+
+
+
+
+
 
 ## Recommended readings
 
