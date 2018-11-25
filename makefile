@@ -1,10 +1,12 @@
-TEX = pandoc
-src = template.tex details.yml
+PANDOC = /usr/bin/env pandoc
+TEMPLATE = template.tex
+src = details.yml
+out = output.pdf
 FLAGS = --pdf-engine=xelatex
 
-output.pdf : $(src)
-	$(TEX) $(filter-out $<,$^ ) -o $@ --template=$< $(FLAGS)
+render : $(src)
+	$(PANDOC) -o $(out) --template=$(TEMPLATE) $(FLAGS)  --standalone -- $(src) 
 
 .PHONY: clean
 clean :
-	rm output.pdf
+	rm $(name)
