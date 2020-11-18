@@ -75,11 +75,16 @@ Although I didn't test it, you can probably use this on Windows, too. Both [Pand
 - **`fontsize`**: Possible values here are 10pt, 11pt and 12pt.
 - **`geometry`**: A string that sets the margins through `geometry`. Read [this](https://www.sharelatex.com/learn/Page_size_and_margins) to learn how this package works.
 - **`closingnote`**: This gets printed after the table as a closing note. Use it to provide your bank details and a thank you message.
-- **`letterhead`**: include custom letterhead in the PDF (see below).
+- **`letterhead`**: Include custom letterhead in the PDF (see below).
+- **`signature`**: Include custom signature in the PDF (see below).  Set the filename for the signature file.
 
 ## Custom letterhead
 
 If you have already designed your own letterhead and want to use it with this template, including it should be easy enough. Set the `letterhead` option to `true` to activate the `wallpaper` package in the template. `wallpaper` will look for a file named `letterhead.pdf` in the project root folder and print it on the PDF before compiling the document. Change the fonts to match the ones in your letterhead, adjust the margins with `geometry` and you should be all set.
+
+## Custom signature
+
+If you want to include your signature with this template, you can add use the `signature` option to point to the image file containing your siganture.  A vector image (in PDF or EPS format) is preferred over a raster image (in PNG or JPEG format).  You can use tools like [`imagemagick`](https://imagemagick.org/) and [`potrace`](http://potrace.sourceforge.net/) can be used to create clean versions of your signature from scanned images.  [Werner](https://tex-talk.net/2012/01/textalk-an-interview-with-werner/), a TeX user, has provided [detailed information on how to clean up a signature](https://tex.stackexchange.com/a/32940) using tools like `potrace` on the TeX Stack Exchange.
 
 ## Recommended readings
 
