@@ -47,4 +47,5 @@ sansfont: Helvetica Neue
 fontsize: 10pt
 geometry: a4paper, left=43mm, right=43mm, top=51mm, bottom=17mm
 # letterhead: true # To include personalized letterheads
+# signature: signature.pdf # To include a signature in the PDF file
 ---
