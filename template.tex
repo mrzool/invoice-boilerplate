@@ -20,6 +20,11 @@ $if(letterhead)$
   \ULCornerWallPaper{1}{letterhead.pdf}
 $endif$
 
+$if(signature)$
+  % To include the letterhead
+  \usepackage{graphicx}
+$endif$
+
 % TYPOGRAPHY
 %--------------------------------
 \usepackage{fontspec} 
@@ -146,6 +151,10 @@ $if(commasep)$\STsetdecimalsep{,}$endif$ % Use comma as decimal separator
 $closingnote$
 
 \medskip
+
+$if(signature)$
+\includegraphics[height=1.5\baselineskip]{$signature$} \par
+$endif$
 
 $author$
 
