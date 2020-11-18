@@ -69,7 +69,7 @@ Although I didn't test it, you can probably use this on Windows, too. Both [Pand
 - **`VAT`**: Your VAT rate.
 - **`currency`**: Your currency code (USD, EUR...)
 - **`commasep`**: Set to `true` to use a comma as decimal separator. This is for display purposes only—remember to always use a dot to set the prices in your YAML file.
-- **`lang`**: Sets the main language through the `polyglossia` package. This is important for proper hyphenation and date format.
+- **`lang`**: Sets the main language through the `polyglossia` package. This is important for proper hyphenation and date format.  Use [IETF language tags format](https://tools.ietf.org/html/bcp47), as that is [what Pandoc expects](https://pandoc.org/MANUAL.html#language-variables).
 - **`seriffont`**: Used for the heading and the sender address. Hoefler Text is the default, but every font installed on your system should work out of the box (thanks, XeTeX!)
 - **`sansfont`**: Used to render the recipient address, the table and the closing note. Defaults to Helvetica Neue.
 - **`fontsize`**: Possible values here are 10pt, 11pt and 12pt.
