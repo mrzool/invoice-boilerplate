@@ -39,7 +39,7 @@ closingnote: |
 # Invoice settings
 currency: EUR
 # commasep: true
-lang: english
+lang: en-GB
 
 # Typography and layout
 seriffont: Hoefler Text
