@@ -75,8 +75,8 @@ Although I didn't test it, you can probably use this on Windows, too. Both [Pand
 - **`fontsize`**: Possible values here are 10pt, 11pt and 12pt.
 - **`geometry`**: A string that sets the margins through `geometry`. Read [this](https://www.sharelatex.com/learn/Page_size_and_margins) to learn how this package works.
 - **`closingnote`**: This gets printed after the table as a closing note. Use it to provide your bank details and a thank you message.
-- **`letterhead`**: Include custom letterhead in the PDF (see below).
-- **`signature`**: Include custom signature in the PDF (see below).  Set the filename for the signature file.
+- **`letterhead`**: Include custom letterhead in the PDF (see below).  Value should be set to `true` if needed.
+- **`signature`**: Include custom signature in the PDF (see below).  Value should be set to the filename of the signature file.
 
 ## Custom letterhead
 
