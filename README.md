@@ -56,6 +56,8 @@ To install pandoc on Mac OS X, run `brew install pandoc`. To install it on Linux
 1. Open `details.yml` with your text editor and fill it with your details, the invoice recipient's details, services/prices, and the desired settings.
 2. Run `make` to compile the PDF.
 
+Some countries require invoices to be signed. If a file named `signature.pdf` is present in the directory, the boilerplate will automatically print it after the closing note as a final touch. Follow [this method](http://tex.stackexchange.com/a/32940/82423) to import your own signature.
+
 **Note**: this template needs to be compiled with XeTeX.
 
 ### Note for Windows users
