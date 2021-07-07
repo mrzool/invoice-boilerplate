@@ -26,6 +26,16 @@ $endif$
 \usepackage{xunicode}
 \usepackage{xltxtra}
 
+$if(watermark.text)$
+    \usepackage{draftwatermark}
+    \SetWatermarkText{$watermark.text$}
+    $if(watermark.scale)$ \SetWatermarkScale{$watermark.scale$} $endif$
+    $if(watermark.color)$ \SetWatermarkColor[$watermark.color$]{$if(watermark.transparency)$ $watermark.transparency$ $endif$} $endif$
+    $if(watermark.size)$ \SetWatermarkFontSize{$watermark.size$} $endif$
+    $if(watermark.angle)$ \SetWatermarkAngle{$watermark.angle$} $endif$
+$endif$
+
+
 % converts LaTeX specials (quotes, dashes etc.) to Unicode
 \defaultfontfeatures{Mapping=tex-text}
 \setromanfont [Ligatures={Common}, Numbers={OldStyle}]{$seriffont$}

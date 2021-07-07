@@ -47,4 +47,11 @@ sansfont: Helvetica Neue
 fontsize: 10pt
 geometry: a4paper, left=43mm, right=43mm, top=51mm, bottom=17mm
 # letterhead: true # To include personalized letterheads
+watermark:
+  text: #DRAFT # draft, approved, paid, whatever
+  scale: #2 # optional
+  angle: #90 # optional
+  size: #1cm # optional
+  color: #gray # optional
+  transparency: #0.9 # transparency (0 to 1)
 ---
