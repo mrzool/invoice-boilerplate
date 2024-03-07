@@ -1,0 +1,1 @@
+pandoc details.yml -o output.pdf --template=template.tex --pdf-engine=xelatex

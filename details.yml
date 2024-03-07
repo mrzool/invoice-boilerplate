@@ -1,5 +1,5 @@
 ---
-invoice-nr: 2015-11-04
+invoice-nr: 2024-11-04
 author: Max Mustermann
 city: Musterstadt
 from:
@@ -29,7 +29,7 @@ closingnote: |
    
     Mustermann GmbH  
     Kreditinstitut: Deutsche Postbank AG  
-    IBAN: DE18 3601 0043 9999 9999 99  
+    IBAN: DE18 3601 0043 9999 9999 99
     BIC: PBNKDEFF  
 
     We really appreciate your business and look forward to future projects together.
@@ -42,8 +42,8 @@ currency: EUR
 lang: en-GB
 
 # Typography and layout
-seriffont: Hoefler Text
-sansfont: Helvetica Neue
+seriffont: Garamond
+sansfont: Arial
 fontsize: 10pt
 geometry: a4paper, left=43mm, right=43mm, top=51mm, bottom=17mm
 # letterhead: true # To include personalized letterheads
