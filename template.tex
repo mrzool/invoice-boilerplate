@@ -51,6 +51,8 @@ $endif$
 % TABLE CUSTOMIZATION
 %--------------------------------
 \usepackage{spreadtab}
+\usepackage{xfp}
+\usepackage{siunitx}
 \usepackage[compact]{titlesec} % For customizing title sections
 \titlespacing*{\section}{0pt}{3pt}{-7pt} % Remove margin bottom from the title
 \usepackage{arydshln} % For the dotted line on the table
@@ -118,10 +120,10 @@ $endfor$
 \footnotesize
 \newcounter{pos}
 \setcounter{pos}{0}
-\STautoround*{2} % Get spreadtab to always display the decimal part
 $if(commasep)$\STsetdecimalsep{,}$endif$ % Use comma as decimal separator
+\def\STprintnum#1{\num[round-mode = places, round-precision = 2, minimum-decimal-digits = 2]{#1}}
 
-\begin{spreadtab}{{tabular}[t t t]{lp{8.2cm}r}}
+\begin{spreadtab}[autoround=2]{{tabular}[t t t]{lp{8.2cm}r}}
   \hdashline[1pt/1pt]
   @ \noalign{\vskip 2mm} \textbf{Pos.} & @ \textbf{Description} & @ \textbf{Prices in $currency$} \\ \hline
       $for(service)$ @ \noalign{\vskip 2mm} \refstepcounter{pos} \thepos 
