@@ -121,20 +121,40 @@ $endfor$
 \STautoround*{2} % Get spreadtab to always display the decimal part
 $if(commasep)$\STsetdecimalsep{,}$endif$ % Use comma as decimal separator
 
-\begin{spreadtab}{{tabular}[t t t]{lp{8.2cm}r}}
-  \hdashline[1pt/1pt]
-  @ \noalign{\vskip 2mm} \textbf{Pos.} & @ \textbf{Description} & @ \textbf{Prices in $currency$} \\ \hline
-      $for(service)$ @ \noalign{\vskip 2mm} \refstepcounter{pos} \thepos 
-        & @ $service.description$ 
-        $if(service.details)$\newline \begin{itemize} 
-          $for(service.details)$\scriptsize \item $service.details$ 
-          $endfor$ \end{itemize}
-          $endif$ & $service.price$\\$endfor$ \noalign{\vskip 2mm} \hline
-  $if(VAT)$
-    @ & @ \multicolumn{1}{r}{Subtotal:}                & :={sum(c1:[0,-1])} \\ \hhline{~~-}
-    @ & @ \multicolumn{1}{r}{VAT $VAT$\%:}               & $VAT$/100*[0,-1] \\ \hhline{~~-}
-  $endif$
-  @ & @ \multicolumn{1}{r}{\textbf{Total:}}   & \textbf{:={$if(VAT)$[0,-1]+[0,-2]$else$sum(c1:[0,-1])$endif$}} \\ \hhline{~~-}
+\begin{spreadtab}{{tabular}{c p{.6\textwidth} c c r}}
+  \hline%
+  @ \noalign{\vskip 2mm} \textbf{Pos.} & @ \textbf{Description} & @ \textbf{Hours} & @ \textbf{$currency$ / h} & @ \textbf{Price in $currency$} \\ %
+  \hline %
+  $for(service)$ %
+    @ \noalign{\vskip 2mm} \refstepcounter{pos} \thepos % print pos number in first column
+    & @ $service.description$ % print service description
+      $if(service.details)$ %
+        \newline \begin{itemize} % list details as itemized list
+        $for(service.details)$ %
+          {\scriptsize \item $service.details$} %
+        $endfor$ %
+        \end{itemize} %
+      $endif$ %
+      $if(service.price)$
+        & %
+        & %
+        & $service.price$ %
+      $else$
+        & $service.hours$ %
+        & $if(service.hourlyWage)$ $service.hourlyWage$ $else$ $hourlyWage$ $endif$ % Use global hourly wage or service-specific if it is set
+        & :={[-2,0]*[-1,0]} % calculate total as hours * hourlyWage
+      $endif$ %
+      \\
+  $endfor$ %
+%
+  \noalign{\vskip 2mm} \hline %
+%
+  $if(VAT)$ %
+    @ & @ \multicolumn{3}{r}{Subtotal:}                & :={sum(e1:[0,-1])} \\ \hhline{~~~~-} %
+    @ & @ \multicolumn{3}{r}{VAT $VAT$\%:}               & $VAT$/100*[0,-1] \\ \hhline{~~~~-} %
+  $endif$ %
+%
+    @ & @ \multicolumn{1}{r}{Total hours:} & :={sum(c1:[0,-1])} & @ \multicolumn{1}{r}{\textbf{Total:}}  & \textbf{:={$if(VAT)$[0,-1]+[0,-2]$else$sum(e1:[0,-1])$endif$}} \\ \hhline{~~~~-} %
 \end{spreadtab}
 
 
