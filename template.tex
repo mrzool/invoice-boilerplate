@@ -137,6 +137,14 @@ $if(commasep)$\STsetdecimalsep{,}$endif$ % Use comma as decimal separator
   @ & @ \multicolumn{1}{r}{\textbf{Total:}}   & \textbf{:={$if(VAT)$[0,-1]+[0,-2]$else$sum(c1:[0,-1])$endif$}} \\ \hhline{~~-}
 \end{spreadtab}
 
+\begin{center}
+	\footnotesize
+	$if(taxFree)$
+	Tax free delivery.
+	$else$
+	According to the reverse charge system, tax liability transfers to the recipient of the services.
+	$endif$
+\end{center}
 
 \vspace{15mm}
 
