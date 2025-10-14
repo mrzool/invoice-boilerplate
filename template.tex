@@ -115,6 +115,11 @@ $endfor$
 
 
 \section*{\textsc{Invoice} \textsc{\#$invoice-nr$}}
+
+$if(po)$
+  \hspace{3mm}{\footnotesize \textsc{\#$po$}}
+$endif$
+
 \footnotesize
 \newcounter{pos}
 \setcounter{pos}{0}
