@@ -137,20 +137,59 @@ $if(commasep)$\STsetdecimalsep{,}$endif$ % Use comma as decimal separator
   @ & @ \multicolumn{1}{r}{\textbf{Total:}}   & \textbf{:={$if(VAT)$[0,-1]+[0,-2]$else$sum(c1:[0,-1])$endif$}} \\ \hhline{~~-}
 \end{spreadtab}
 
-
-\vspace{15mm}
+\newpage
 
 \sffamily
 \small
-$closingnote$
+$transferText$:
 
-\medskip
+\renewcommand{\arraystretch}{1}
+\begin{tabular}{r@{:\hspace{1em}} l}
+  $if(taxID)$ %
+    Tax ID & $taxID$ \\
+  $endif$ %
+
+  $if(accountHolder)$ %
+    Account holder & $accountHolder$ \\
+  $endif$ %
+
+  $if(accountNumber)$ %
+    Account number & $accountNumber$ \\
+  $endif$ %
+
+  $if(routingNumber)$ %
+    Routing number & $routingNumber$ \\
+  $endif$ %
+
+  $if(iban)$ %
+    IBAN & $iban$ \\
+  $endif$ %
+
+  $if(bic)$ %
+    BIC & $bic$ \\
+  $endif$ %
+
+  $if(bank)$ %
+    Bank & $bank$ \\
+  $endif$ %
+
+  $if(bankAddress)$ %
+    Address
+    $for(bankAddress)$
+      & $bankAddress$ \\
+    $endfor$
+  $endif$ %
+\end{tabular}
+
+\vspace{5mm}
+
+$closingnote$
 
 \IfFileExists{signature.pdf}
 {
       \includegraphics[height=3.5\baselineskip]{signature.pdf} \par
 }
 
-$author$
+\hspace{.5em}$author$
 
 \end{document}
